@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ansuran Telefon Tanpa Kad Kredit | PakaiDulu by DirectD</title>
+<style>
+  :root {
+    --primary: #0e7cff;
+    --primary-dark: #0a5fd4;
+    --dark: #0b1526;
+    --accent: #25d366;
+    --bg: #f5f8ff;
+    --text: #1c2536;
+    --muted: #6b7688;
+    --card: #ffffff;
+    --radius: 16px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  img { max-width: 100%; }
+
+  /* ===== NAVBAR ===== */
+  .navbar {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,.92);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 14px rgba(10,50,120,.08);
+  }
+  .nav-inner {
+    max-width: 1120px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 20px; gap: 16px;
+  }
+  .logo {
+    display: flex; align-items: center; gap: 10px;
+    font-weight: 800; font-size: 1.15rem; color: var(--dark);
+    text-decoration: none;
+  }
+  .logo-badge {
+    width: 38px; height: 38px; border-radius: 10px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #fff; display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+  }
+  .logo small { display: block; font-size: .62rem; font-weight: 600; color: var(--primary); letter-spacing: .5px; }
+  .nav-links { display: flex; gap: 26px; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--text); font-weight: 600; font-size: .95rem; }
+  .nav-links a:hover { color: var(--primary); }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 12px 24px; border-radius: 999px; border: none; cursor: pointer;
+    font-weight: 700; font-size: .98rem; text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #fff; box-shadow: 0 8px 20px rgba(14,124,255,.35); }
+  .btn-wa { background: var(--accent); color: #fff; box-shadow: 0 8px 20px rgba(37,211,102,.35); }
+  .btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.7); }
+  .btn-outline:hover { background: rgba(255,255,255,.12); }
+
+  /* ===== HERO ===== */
+  .hero {
+    background:
+      radial-gradient(900px 500px at 85% -10%, rgba(37,211,102,.25), transparent 60%),
+      linear-gradient(135deg, #0b1526 0%, #10306e 55%, #0e7cff 130%);
+    color: #fff;
+    padding: 90px 20px 110px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+  .hero-badge {
+    display: inline-block; background: rgba(255,255,255,.14);
+    border: 1px solid rgba(255,255,255,.25);
+    padding: 7px 16px; border-radius: 999px;
+    font-size: .85rem; font-weight: 600; margin-bottom: 20px;
+  }
+  .hero h1 { font-size: clamp(1.9rem, 4.2vw, 3.1rem); line-height: 1.15; font-weight: 800; margin-bottom: 18px; }
+  .hero h1 span { color: #7fd0ff; }
+  .hero p.lead { font-size: 1.08rem; color: rgba(255,255,255,.85); max-width: 520px; margin-bottom: 28px; }
+  .hero-price { margin-bottom: 30px; }
+  .hero-price .rm { font-size: 2.6rem; font-weight: 800; color: #7fd0ff; }
+  .hero-price .per { font-size: 1rem; color: rgba(255,255,255,.8); }
+  .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+  .stock-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #fff; color: var(--dark);
+    padding: 10px 18px; border-radius: 999px; font-weight: 700; font-size: .9rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,.18);
+  }
+  .stock-dot { width: 9px; height: 9px; background: #ff5a5a; border-radius: 50%; animation: blink 1.2s infinite; }
+  @keyframes blink { 50% { opacity: .25; } }
+
+  .hero-card {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 22px; padding: 28px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 24px 60px rgba(0,0,0,.28);
+  }
+  .hero-card h3 { font-size: 1.05rem; margin-bottom: 16px; font-weight: 700; }
+  .step { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 16px; }
+  .step:last-child { margin-bottom: 0; }
+  .step-num {
+    flex: 0 0 34px; width: 34px; height: 34px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #1fb457);
+    color: #fff; font-weight: 800; font-size: .95rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .step b { display: block; font-size: .98rem; }
+  .step small { color: rgba(255,255,255,.7); }
+
+  /* ===== SECTIONS ===== */
+  section { padding: 80px 20px; }
+  .section-inner { max-width: 1120px; margin: 0 auto; }
+  .section-head { text-align: center; max-width: 640px; margin: 0 auto 48px; }
+  .kicker { color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; font-size: .8rem; }
+  .section-head h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; color: var(--dark); margin: 8px 0 10px; }
+  .section-head p { color: var(--muted); }
+
+  /* ===== FEATURES ===== */
+  .features { background: #fff; }
+  .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; }
+  .feature {
+    background: var(--bg); border: 1px solid #e4ecff;
+    border-radius: var(--radius); padding: 28px 24px;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .feature:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(14,124,255,.12); }
+  .feature .icon {
+    width: 52px; height: 52px; border-radius: 14px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #fff; font-size: 1.4rem;
+    display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
+  }
+  .feature h3 { font-size: 1.08rem; margin-bottom: 8px; color: var(--dark); }
+  .feature p { font-size: .92rem; color: var(--muted); }
+
+  /* ===== FORM / PENDAFTARAN ===== */
+  .register { background: linear-gradient(180deg, #eef4ff, #f5f8ff); }
+  .register-wrap {
+    display: grid; grid-template-columns: 1fr 1.1fr; gap: 40px; align-items: start;
+  }
+  .register-info h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 800; color: var(--dark); margin-bottom: 14px; }
+  .register-info p { color: var(--muted); margin-bottom: 22px; }
+  .info-list { list-style: none; }
+  .info-list li { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; font-size: .97rem; }
+  .tick { color: var(--accent); font-weight: 800; font-size: 1.1rem; line-height: 1.4; }
+  .stat-box {
+    margin-top: 28px; background: var(--dark); color: #fff;
+    border-radius: var(--radius); padding: 24px; text-align: center;
+  }
+  .stat-box .big { font-size: 2.2rem; font-weight: 800; color: #7fd0ff; }
+  .stat-box p { color: rgba(255,255,255,.75); font-size: .9rem; margin: 0; }
+
+  .form-card {
+    background: var(--card); border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(10,50,120,.12);
+    padding: 34px 30px;
+  }
+  .form-card h3 { color: var(--dark); font-size: 1.25rem; margin-bottom: 4px; }
+  .form-card .sub { color: var(--muted); font-size: .9rem; margin-bottom: 24px; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field.full { grid-column: 1 / -1; }
+  .field label { font-size: .85rem; font-weight: 700; color: var(--dark); }
+  .field label span { color: #ff5a5a; }
+  .field input, .field select, .field textarea {
+    padding: 12px 14px; border: 1.5px solid #dbe4f5; border-radius: 10px;
+    font-size: .95rem; font-family: inherit; background: #fbfcff;
+    transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: none; border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(14,124,255,.15);
+  }
+  .field textarea { resize: vertical; min-height: 84px; }
+  .form-card .btn { width: 100%; margin-top: 22px; padding: 15px; font-size: 1.05rem; }
+  .form-note { text-align: center; font-size: .82rem; color: var(--muted); margin-top: 12px; }
+
+  /* ===== TESTIMONI ===== */
+  .testi { background: #fff; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
+  .testi-card {
+    background: var(--bg); border: 1px solid #e4ecff; border-radius: var(--radius);
+    padding: 26px; display: flex; flex-direction: column; gap: 14px;
+  }
+  .stars { color: #ffb400; letter-spacing: 2px; font-size: 1rem; }
+  .testi-card p { font-size: .94rem; color: var(--text); flex: 1; }
+  .testi-user { display: flex; align-items: center; gap: 12px; }
+  .avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center;
+  }
+  .testi-user b { display: block; font-size: .93rem; color: var(--dark); }
+  .testi-user small { color: var(--muted); font-size: .8rem; }
+
+  /* ===== CTA WA ===== */
+  .cta-wa { background: linear-gradient(135deg, #0b1526, #10306e); color: #fff; text-align: center; }
+  .cta-wa h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 12px; }
+  .cta-wa h2 span { color: #7fd0ff; }
+  .cta-wa p { color: rgba(255,255,255,.8); max-width: 560px; margin: 0 auto 30px; }
+
+  /* ===== FOOTER ===== */
+  footer { background: var(--dark); color: rgba(255,255,255,.75); padding: 50px 20px 30px; }
+  .footer-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; }
+  footer h4 { color: #fff; margin-bottom: 14px; font-size: 1.05rem; }
+  footer p, footer a { font-size: .92rem; color: rgba(255,255,255,.7); text-decoration: none; }
+  footer a:hover { color: #fff; }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 9px; }
+  .copy { border-top: 1px solid rgba(255,255,255,.12); margin-top: 36px; padding-top: 20px; text-align: center; font-size: .82rem; }
+
+  /* ===== FLOATING WA ===== */
+  .wa-float {
+    position: fixed; right: 22px; bottom: 22px; z-index: 200;
+    width: 60px; height: 60px; border-radius: 50%;
+    background: var(--accent); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 10px 30px rgba(37,211,102,.5);
+    text-decoration: none; font-size: 1.7rem;
+    transition: transform .15s ease;
+  }
+  .wa-float:hover { transform: scale(1.1); }
+  .wa-float svg { width: 30px; height: 30px; fill: #fff; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    .hero-inner, .register-wrap, .footer-inner { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .hero { padding: 60px 20px 80px; }
+    .form-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a class="logo" href="#home">
+      <span class="logo-badge">📱</span>
+      <span>PakaiDulu<small>by DirectD</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Utama</a></li>
+      <li><a href="#daftar">Pendaftaran</a></li>
+      <li><a href="#testimoni">Testimoni</a></li>
+    </ul>
+    <a class="btn btn-wa" href="https://wa.me/60183131000?text=Hi%2C%20saya%20berminat%20dengan%20ansuran%20telefon%20PakaiDulu" target="_blank">
+      💬 Chat WhatsApp
+    </a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero" id="home">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-badge">✨ Ansuran Telefon Tanpa Kad Kredit</span>
+      <h1>Punya Telefon Idaman, <span>Bayar Bulan-Bulan</span> Sahaja</h1>
+      <div class="hero-price">
+        <span class="rm">RM7.30</span> <span class="per">sehari</span>
+      </div>
+      <p class="lead">Dapatkan peranti pilihan anda dengan pelan bayaran yang mudah dan mampah milik. Mohon sekarang atau semak kelayakan anda dalam hanya 5 minit!</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#daftar">🚀 Mohon Sekarang</a>
+        <a class="btn btn-outline" href="https://wa.me/60183131000?text=Hi%2C%20saya%20nak%20semak%20kelayakan%20ansuran" target="_blank">Semak Kelayakan</a>
+      </div>
+      <div style="margin-top:26px;">
+        <span class="stock-pill"><span class="stock-dot"></span> Tinggal 47 unit</span>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h3>⚡ Cara Mudah Miliki Telefon Anda</h3>
+      <div class="step"><span class="step-num">1</span><div><b>Semak Kelayakan</b><small>Hanya 5 minit, percuma &amp; tanpa risiko</small></div></div>
+      <div class="step"><span class="step-num">2</span><div><b>Sediakan Dokumen</b><small>IC + 1 bulan slip gaji sahaja</small></div></div>
+      <div class="step"><span class="step-num">3</span><div><b>Kelulusan Pantas</b><small>Kelulusan dalam 2 jam (Lane Pantas)</small></div></div>
+      <div class="step"><span class="step-num">4</span><div><b>Pulang Dengan Telefon</b><small>Ambil di cawangan DirectD seluruh Malaysia</small></div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== FEATURES ===== -->
+<section class="features">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="kicker">Kenapa Pilih Kami</span>
+      <h2>Kenapa Pilih PakaiDulu by DirectD?</h2>
+      <p>Cara paling mudah dan selamat untuk memiliki peranti idaman anda</p>
+    </div>
+    <div class="grid-4">
+      <div class="feature">
+        <div class="icon">🛡️</div>
+        <h3>Tanpa Caj Tersembunyi</h3>
+        <p>Tanpa deposit, tiada mark-up, tiada kenaikan bulanan. Bayaran telus &amp; jujur.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">⚡</div>
+        <h3>Proses Mudah &amp; Percuma</h3>
+        <p>Permohonan percuma &amp; pantas. Hanya perlukan IC + slip gaji sebulan.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">✅</div>
+        <h3>Jaminan 100% Original</h3>
+        <p>Dijamin 100% original serta dilindungi waranti peranti selama 1 tahun.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">📍</div>
+        <h3>Cawangan Seluruh Malaysia</h3>
+        <p>Selepas lulus, ambil di mana-mana cawangan DirectD seluruh Malaysia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PENDAFTARAN ===== -->
+<section class="register" id="daftar">
+  <div class="section-inner register-wrap">
+    <div class="register-info">
+      <span class="kicker">Pendaftaran</span>
+      <h2>Daftar Sekarang, Miliki Telefon Idaman Anda</h2>
+      <p>Isi borang di sebelah dan data anda akan terus dihantar ke WhatsApp kami. Pasukan kami akan menghubungi anda untuk semakan kelayakan.</p>
+      <ul class="info-list">
+        <li><span class="tick">✔</span> Percuma &amp; tanpa komitmen</li>
+        <li><span class="tick">✔</span> Semakan kelayakan hanya 5 minit</li>
+        <li><span class="tick">✔</span> Tanpa kad kredit &amp; tanpa deposit</li>
+        <li><span class="tick">✔</span> Terbuka kepada pekerja tetap, kontrak, freelancer, rider &amp; pelajar</li>
+      </ul>
+      <div class="stat-box">
+        <div class="big">97%</div>
+        <p>peluang lulus bagi pemohon yang memenuhi syarat asas</p>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h3>Borang Pendaftaran</h3>
+      <p class="sub">Isi maklumat di bawah — terus dihantar ke WhatsApp kami</p>
+      <form id="regForm">
+        <div class="form-grid">
+          <div class="field full">
+            <label>Nama Penuh <span>*</span></label>
+            <input type="text" id="nama" placeholder="Cth: Ahmad bin Ali" required>
+          </div>
+          <div class="field">
+            <label>No. WhatsApp <span>*</span></label>
+            <input type="tel" id="telefon" placeholder="Cth: 0123456789" required>
+          </div>
+          <div class="field">
+            <label>Umur <span>*</span></label>
+            <input type="number" id="umur" placeholder="Cth: 25" min="18" max="60" required>
+          </div>
+          <div class="field">
+            <label>Jenis Peranti <span>*</span></label>
+            <select id="peranti" required>
+              <option value="">— Pilih peranti —</option>
+              <option>iPhone 17</option>
+              <option>iPhone 16</option>
+              <option>iPhone 15</option>
+              <option>Samsung Galaxy</option>
+              <option>Xiaomi</option>
+              <option>Redmi</option>
+              <option>vivo</option>
+              <option>OPPO</option>
+              <option>Lain-lain</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Tempoh Ansuran <span>*</span></label>
+            <select id="tempoh" required>
+              <option value="">— Pilih tempoh —</option>
+              <option>12 Bulan</option>
+              <option>24 Bulan</option>
+              <option>36 Bulan</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Pekerjaan <span>*</span></label>
+            <select id="pekerjaan" required>
+              <option value="">— Pilih pekerjaan —</option>
+              <option>Pekerja Tetap</option>
+              <option>Pekerja Kontrak</option>
+              <option>Freelance / Self-Employed</option>
+              <option>Rider (Grab / ShopeeFood / FoodPanda)</option>
+              <option>Pelajar Universiti / Kolej</option>
+              <option>Suri Rumah</option>
+              <option>Lain-lain</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Pendapatan Sebulan (RM)</label>
+            <input type="number" id="pendapatan" placeholder="Cth: 2500" min="0">
+          </div>
+          <div class="field full">
+            <label>Catatan (pilihan)</label>
+            <textarea id="catatan" placeholder="Model warna, lokasi cawangan pilihan, atau apa-apa pertanyaan..."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-wa">💬 Hantar ke WhatsApp</button>
+        <p class="form-note">Dengan menghantar borang ini, anda bersetuju untuk dihubungi oleh pasukan kami melalui WhatsApp.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONI ===== -->
+<section class="testi" id="testimoni">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="kicker">Testimoni</span>
+      <h2>Testimoni Pelanggan Kami</h2>
+      <p>Ramai pelanggan berjaya lulus permohonan ansuran dan miliki gajet idaman mereka hari ini!</p>
+    </div>
+    <div class="grid-3">
+      <div class="testi-card">
+        <span class="stars">★★★★★</span>
+        <p>"Friendly staff.. Easy to deal with and quick to pass 😆😆🫶🏻🫶🏻 Very recommended guys"</p>
+        <div class="testi-user">
+          <span class="avatar">I</span>
+          <div><b>Izzati Syamimi</b><small>DirectD Subang Jaya (HQ)</small></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <span class="stars">★★★★★</span>
+        <p>"The best and the service is very tiptop and all the transactions are very easy and fast, best directd, highly recommended!!!!"</p>
+        <div class="testi-user">
+          <span class="avatar">F</span>
+          <div><b>Fakhrurrazi Razali</b><small>DirectD Subang Jaya (HQ)</small></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <span class="stars">★★★★★</span>
+        <p>"THANKS A LOT IN THIS SHOP .. RECOMMENDED .. SO EASY .. AND THANKS TO THE STAFF NAME (NINA) HELP ME A-Z UNTIL GOT THE PHONE .. RECOMMENDED!!!!"</p>
+        <div class="testi-user">
+          <span class="avatar">J</span>
+          <div><b>John Palie</b><small>DirectD Subang Jaya (HQ)</small></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <span class="stars">★★★★★</span>
+        <p>"This is 3rd time visited the outlet. Bought 4th handphone for my family. Service provided is satisfied. Very recommended if anyone have plan to buy handphone."</p>
+        <div class="testi-user">
+          <span class="avatar">R</span>
+          <div><b>Rahasiati Murni</b><small>DirectD Subang Jaya (HQ)</small></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <span class="stars">★★★★★</span>
+        <p>"very recommend 👍🏻👍🏻 the approval process is also fast! trusted seller 🥰 this shop is one of the cheapest interest I've seen thankyou direct digital 👍🏻"</p>
+        <div class="testi-user">
+          <span class="avatar">A</span>
+          <div><b>Anis Natasha</b><small>DirectD Subang Jaya (HQ)</small></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <span class="stars">★★★★★</span>
+        <p>"Bought my new phone here. Updated well on the status, option and friendly attentive. Great experience to shop here."</p>
+        <div class="testi-user">
+          <span class="avatar">W</span>
+          <div><b>Awien Nizam</b><small>DirectD Subang Jaya (HQ)</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA WA ===== -->
+<section class="cta-wa">
+  <div class="section-inner">
+    <h2>Masih Ragu? <span>Chat Terus Dengan Kami</span></h2>
+    <p>Pasukan kami sedia membantu anda dari A hingga Z — semakan kelayakan, pemilihan peranti, sehingga anda pulang dengan telefon idaman anda.</p>
+    <a class="btn btn-wa" href="https://wa.me/60183131000?text=Hi%2C%20saya%20nak%20tanya%20tentang%20ansuran%20telefon%20PakaiDulu" target="_blank" style="font-size:1.1rem; padding:16px 36px;">
+      💬 WhatsApp Kami Sekarang
+    </a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h4>📱 PakaiDulu by DirectD</h4>
+      <p>Platform ansuran telefon tanpa kad kredit di Malaysia. Miliki iPhone, Samsung, Xiaomi dan banyak lagi dengan bayaran bulanan yang telus — tanpa deposit, tanpa caj tersembunyi.</p>
+    </div>
+    <div>
+      <h4>Hubungi Kami</h4>
+      <ul class="footer-links">
+        <li>📍 No. 64 Jalan SS15/4B, Subang Jaya</li>
+        <li>📞 +603-562 11355</li>
+        <li>💬 <a href="https://wa.me/60183131000" target="_blank">WhatsApp: +6018-313 1000</a></li>
+        <li>🕒 Isnin – Jumaat | 10 pagi – 4 petang</li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy">© 2026 PakaiDulu by DirectD. Hak cipta terpelihara.</div>
+</footer>
+
+<!-- ===== FLOATING WHATSAPP ===== -->
+<a class="wa-float" href="https://wa.me/60183131000?text=Hi%2C%20saya%20berminat%20dengan%20ansuran%20telefon%20PakaiDulu" target="_blank" aria-label="Chat WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 .8C7.6.8.8 7.6.8 16c0 2.7.7 5.3 2 7.6L.8 31.2l7.8-2c2.2 1.2 4.7 1.9 7.4 1.9 8.4 0 15.2-6.8 15.2-15.2S24.4.8 16 .8zm0 27.7c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-4.6 1.2 1.2-4.5-.3-.5c-1.3-2-2-4.4-2-6.8C3.1 8.6 8.9 2.8 16 2.8S28.9 8.6 28.9 16 23.1 28.5 16 28.5zm7-9.5c-.4-.2-2.3-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.4.3-.8.1-.4-.2-1.7-.6-3.2-2-1.2-1.1-2-2.4-2.2-2.8-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-.9-2.1-1.2-2.9-.3-.8-.7-.7-.9-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.4s1.4 3.9 1.6 4.2c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9 1 .3 1.9.3 2.6.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.2-.4-.3-.7-.4z"/></svg>
+</a>
+
+<script>
+  // ===== Form -> WhatsApp =====
+  document.getElementById('regForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var WA_NUMBER = '60183131000'; // <-- Ganti nombor WhatsApp di sini
+
+    function val(id) {
+      var el = document.getElementById(id);
+      return el ? el.value.trim() : '';
+    }
+
+    var nama       = val('nama');
+    var telefon    = val('telefon');
+    var umur       = val('umur');
+    var peranti    = val('peranti');
+    var tempoh     = val('tempoh');
+    var pekerjaan  = val('pekerjaan');
+    var pendapatan = val('pendapatan');
+    var catatan    = val('catatan');
+
+    if (!nama || !telefon || !umur || !peranti || !tempoh || !pekerjaan) {
+      alert('Sila lengkapkan borang terlebih dahulu.');
+      return;
+    }
+
+    var msg =
+      '*BORANG PENDAFTARAN PAKAIDULU*\n' +
+      '------------------------------\n' +
+      '👤 Nama: ' + nama + '\n' +
+      '📱 No. WhatsApp: ' + telefon + '\n' +
+      '🎂 Umur: ' + umur + '\n' +
+      '📲 Peranti: ' + peranti + '\n' +
+      '🗓️ Tempoh Ansuran: ' + tempoh + '\n' +
+      '💼 Pekerjaan: ' + pekerjaan + '\n' +
+      (pendapatan ? '💰 Pendapatan: RM' + pendapatan + '\n' : '') +
+      (catatan ? '📝 Catatan: ' + catatan + '\n' : '') +
+      '------------------------------\n' +
+      'Saya berminat untuk memohon ansuran telefon.';
+
+    var url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+    window.open(url, '_blank');
+  });
+</script>
+
+</body>
+</html>
