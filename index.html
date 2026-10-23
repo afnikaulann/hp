@@ -2250,18 +2250,13 @@ function pakaiDuluWA(){
         : 'Sila *lampirkan IC (depan & belakang)* dalam chat ini.\n')
     + 'Saya berminat memohon ansuran telefon.';
 
-  /* Buka Telegram & salin mesej ke clipboard (pautan t.me tidak menyokong teks automatik) */
-  window.open(TG_LINK, '_blank');
+  /* Buka Telegram dengan mesej yang SUDAH SIAP tertulis - pengguna hanya pilih chat & tekan Hantar */
+  window.open('https://t.me/share/url?url=&text=' + encodeURIComponent(msg), '_blank');
+  /* Sandaran: salin juga ke clipboard sekiranya share link tidak berfungsi */
   try {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(msg);
-      alert('Maklumat permohonan anda telah DISALIN ke clipboard. Sila TAMPAL (Ctrl+V) mesej tersebut dalam chat Telegram yang baru terbuka.');
-    } else {
-      alert('Sila salin maklumat ini dan tampal dalam chat Telegram:\n\n' + msg);
-    }
-  } catch(e) {
-    alert('Sila salin maklumat ini dan tampal dalam chat Telegram:\n\n' + msg);
-  }
+    if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(msg); }
+  } catch(e) {}
+  alert('Mesej permohonan anda sudah siap dalam Telegram. Sila pilih chat DirectD_pakaiajadulu, kemudian tekan HANTAR.');
   return false;
 }
 
