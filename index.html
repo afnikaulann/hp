@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8" />
@@ -1462,7 +1462,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-<div class="wp-block-tpgb-tp-button-core tp-button-core tpgb-block-e3e3_20"><a href="https://t.me/DirectD_pakaiajadulu" target="_self" rel="follow noopener" class="tpgb-btn-link"><span class="tpgb-btn-wrap"><span class="tpgb-btn-txt">Semak Kelayakan</span></span></a></div>
+<div class="wp-block-tpgb-tp-button-core tp-button-core tpgb-block-e3e3_20"><a href="https://t.me/pcpanel_23" target="_self" rel="follow noopener" class="tpgb-btn-link"><span class="tpgb-btn-wrap"><span class="tpgb-btn-txt">Semak Kelayakan</span></span></a></div>
 
 </div></div>
 </div>
@@ -2198,14 +2198,14 @@ gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', 
 gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "1", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_1" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_1";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_1" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 1, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );
 </script>
 <!-- ==== Tombol Telegram mengambang ==== -->
-<a href="https://t.me/DirectD_pakaiajadulu" target="_blank" rel="noopener" aria-label="Chat Telegram" style="position:fixed;left:20px;bottom:20px;z-index:99999;width:56px;height:56px;border-radius:50%;background:#229ED9;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(34,158,217,.5);text-decoration:none;">
+<a href="https://t.me/pcpanel_23" target="_blank" rel="noopener" aria-label="Chat Telegram" style="position:fixed;left:20px;bottom:20px;z-index:99999;width:56px;height:56px;border-radius:50%;background:#229ED9;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(34,158,217,.5);text-decoration:none;">
 <svg viewBox="0 0 24 24" width="30" height="30" fill="#ffffff" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.023c-.107.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
 </a>
 <!-- ==== TAMBAHAN: Tombol Telegram & hantar borang ke Telegram ==== -->
 <script>
 function pakaiDuluWA(){
   /* >>> GANTI link Telegram anda di sini <<< */
-  var TG_LINK = 'https://t.me/DirectD_pakaiajadulu';
+  var TG_LINK = 'https://t.me/pcpanel_23';
 
   function v(id){ var el = document.getElementById(id); return el ? el.value.trim() : ''; }
 
@@ -2250,13 +2250,13 @@ function pakaiDuluWA(){
         : 'Sila *lampirkan IC (depan & belakang)* dalam chat ini.\n')
     + 'Saya berminat memohon ansuran telefon.';
 
-  /* Terus buka chat DirectD_pakaiajadulu dengan mesej yang sudah siap */
-  window.open('https://t.me/DirectD_pakaiajadulu?text=' + encodeURIComponent(msg), '_blank');
+  /* Terus buka chat pcpanel_23 dengan mesej yang sudah siap */
+  window.open('https://t.me/pcpanel_23?text=' + encodeURIComponent(msg), '_blank');
   /* Sandaran: mesej turut disalin ke clipboard - sekiranya teks tidak terisi automatik, pengguna hanya perlu tampal (Ctrl+V) */
   try {
     if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(msg); }
   } catch(e) {}
-  alert('Chat DirectD_pakaiajadulu telah dibuka. Jika mesej belum terisi secara automatik, sila TAMPAL (Ctrl+V) mesej yang telah disalin, kemudian tekan HANTAR.');
+  alert('Chat pcpanel_23 telah dibuka. Jika mesej belum terisi secara automatik, sila TAMPAL (Ctrl+V) mesej yang telah disalin, kemudian tekan HANTAR.');
   return false;
 }
 
